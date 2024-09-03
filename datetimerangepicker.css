@@ -1,0 +1,125 @@
+.datetimerange-picker {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    background: aliceblue;
+    padding: 0.5rem;
+    width: auto;
+}
+
+.year-month-picker select {
+    margin-bottom: 15px;
+}
+
+.date-picker {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding-bottom: 3.5rem;
+}
+
+.date-picker ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 250px;
+}
+.date-picker li {
+    width: calc(100% / 7);
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.date-picker li:nth-child(-n+7) {
+    background-color: #ccc;
+    font-weight: bold;
+}
+.date-picker .populated {
+    background-color: #dcf3f9;
+}
+.date-picker .current {
+    /*border: 2px solid #0078c1;*/
+}
+.date-picker .today {
+    background-color: #0078c1;
+}
+.date-picker .today > a {
+    color: #fff;
+}
+.date-picker a {
+    text-decoration: none;
+}
+.date-picker li:hover {
+    background: #dcf3f9;
+}
+
+.time-picker {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.25rem;
+    position: absolute;
+    bottom: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 250px;
+}
+
+.time-picker > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.time-picker input[type="text"] {
+    width: 70%;
+    text-align: center;
+}
+
+.time-picker button {
+    width: 100%;
+}
+
+.time-picker button:last-child {
+    margin-bottom: 0;
+}
+
+.time-picker button {
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-picker button.up-arrow::after, button.down-arrow::after {
+    content: '';
+    border: solid 1px #000;
+    border-width: 0 .1rem .1rem 0;
+    display: inline-block;
+    padding: .1rem;
+}
+
+.time-picker button.up-arrow::after {
+    transform: rotate(-135deg);
+}
+
+.time-picker button.down-arrow::after {
+    transform: rotate(45deg);
+}
+
+.datetimerange-picker .year-month-picker {
+    display: flex;
+    gap: 0.5rem;
+}
+.datetimerange-picker .year-month-picker > select[name='years'] {
+    width: 35%;
+    padding: 0.25rem;
+}
+.datetimerange-picker .year-month-picker > select[name='months'] {
+    width: 65%;
+    padding: 0.25rem;
+}
